@@ -158,8 +158,8 @@ Table of Contents
    | device           |            |        | authentication at        |
    |                  |            |        | share time               |
    +------------------+------------+--------+--------------------------+
-   | Attacker         | HIGH       | HIGH   |                          |
-   | intercepts or    |            |        |                          |
+   | Attacker         | HIGH       | HIGH   | Encrypt transport        |
+   | intercepts or    |            |        | using TLS                |
    | eavesdrops on    |            |        |                          |
    | sharing message  |            |        |                          |
    +------------------+------------+--------+--------------------------+
