@@ -159,10 +159,13 @@ Table of Contents
    | device           |            |        | authentication at        |
    |                  |            |        | share time               |
    +------------------+------------+--------+--------------------------+
-   | Attacker         | HIGH       | HIGH   | Encrypt transport        |
-   | intercepts or    |            |        | using TLS                |
-   | eavesdrops on    |            |        |                          |
-   | sharing message  |            |        |                          |
+   | Attacker         | HIGH       | HIGH   | Solution should          |
+   | intercepts or    |            |        | require an end-to-end    |
+   | eavesdrops on    |            |        | encrypted messaging      |
+   | sharing message  |            |        | channel or otherwise     |
+   |                  |            |        | specify a way to         |
+   |                  |            |        | share a secret out of    |
+   |                  |            |        | band                     |
    +------------------+------------+--------+--------------------------+
    | Sender           | HIGH       | HIGH   | Implementors should      |
    | mistakenly sends |            |        | ensure any initiated     |
