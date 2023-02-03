@@ -16,7 +16,7 @@ Abstract
 
    This document describes a threat model by which the working group can
    evaluate potential solutions to the problems laid out in the TIGRESS
-   charter.
+   charter (https://datatracker.ietf.org/doc/charter-ietf-tigress/).
 
 About This Document
 
@@ -84,9 +84,10 @@ Table of Contents
 
 1.  Introduction
 
-   The TIGRESS Working Group is chartered to deliver a protocol for
-   transferring copies of digital credentials.  The charter specifies
-   certain goals:
+   The TIGRESS Working Group is chartered
+   (https://datatracker.ietf.org/doc/charter-ietf-tigress/) to deliver a
+   protocol for transferring copies of digital credentials.  The charter
+   specifies certain goals:
 
 1.1.  Privacy goals:
 
