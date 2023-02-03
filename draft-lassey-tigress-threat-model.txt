@@ -1,0 +1,247 @@
+
+
+
+
+Transfer dIGital cREdentialS Securely                          B. Lassey
+Internet-Draft                                                    Google
+Intended status: Informational                           3 February 2023
+Expires: 7 August 2023
+
+
+                          TIGRESS Threat Model
+                draft-lassey-tigress-threat-model-latest
+
+Abstract
+
+   TODO Abstract
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-
+   threat-model.html.  Status information for this document may be found
+   at https://datatracker.ietf.org/doc/draft-lassey-tigress-threat-
+   model/.
+
+   Discussion of this document takes place on the Transfer dIGital
+   cREdentialS Securely Working Group mailing list
+   (mailto:tigress@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/tigress/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/tigress/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/bslassey/tigress-threat-model.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 7 August 2023.
+
+Copyright Notice
+
+   Copyright (c) 2023 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+     1.1.  Privacy goals:
+     1.2.  Security goals:
+     1.3.  Functional goals:
+   2.  Threat Model
+     2.1.  If an intermediary server is used
+   3.  Conventions and Definitions
+   4.  IANA Considerations
+   5.  Normative References
+   Acknowledgments
+   Author's Address
+
+1.  Introduction
+
+   The TIGRESS Working Group is chartered to deliver a protocol for
+   transferring copies of digital credentials.  The charter specifies
+   certain goals:
+
+1.1.  Privacy goals:
+
+   *  The relay server should not see sensitive details of the share
+
+   *  The relay server should not be able to provision the credential
+      itself, acting as an intermediary for the recipient (person-in-
+      the-middle, impersonation attack)
+
+   *  Aside from network-level metadata, the relay server should not
+      learn information about the sender or receiver
+
+1.2.  Security goals:
+
+   *  Ensure only the intended recipient is able to provision the
+      credential
+
+   *  Ensure the credential can only be provisioned once (anti-replay)
+
+   *  Ensure the sender has the intent to transfer (proof of the fact
+      that the share initiation is attributed to a valid device and a
+      user)
+
+1.3.  Functional goals:
+
+   *  Allow a sender to initiate a share and select a relay server
+
+   *  Allow a recipient to view the share request, and provision the
+      credential associated with the share upon receipt
+
+   *  Allow a sender and a recipient to perform multiple round trip
+      communications within a limited time frame
+
+   *  Not require that both the sender and recipient have connectivity
+      to the relay server at the same time
+
+   *  Support opaque message content based on the credential type
+
+   *  Support a variety of types of credentials, to include those
+      adhering to public standards (e.g., Car Connectivity Consortium)
+      and proprietary (i.e., non-public or closed community) formats
+
+   From these goals we can derive a threat model for the general problem
+   space.
+
+2.  Threat Model
+
+   ## Assets and Data ### Credential The credential or key that is being
+   shared via this protocol. ### Intermediary data Data that is shared
+   over the course of the transaction. ### Share invitation The initial
+   data shared with the reciever which represents an invitation to share
+   a credential. # Users ## Sender The user who initiates the share. ##
+   Receiver The user who is the intended recipient and accepts the
+   invitation to share a credential. # Attackers and Motivations #
+   Threats and mitigations
+
+   +==================+============+========+==========================+
+   | Threat           | Likelihood | Impact | Mitigations              |
+   | Description      |            |        |                          |
+   +==================+============+========+==========================+
+   | An Attacker with | MED        | HIGH   | Implementors SHOULD      |
+   | physical access  |            |        | take sufficient          |
+   | to the victim's  |            |        | precautions to ensure    |
+   | phone initiates  |            |        | that the device owner    |
+   | a share of a     |            |        | is in possession of      |
+   | Credential to    |            |        | the device when          |
+   | the the          |            |        | initiating a share       |
+   | Attacker's       |            |        | such as requiring        |
+   | device           |            |        | authentication at        |
+   |                  |            |        | share time               |
+   +------------------+------------+--------+--------------------------+
+   | Attacker         | HIGH       | HIGH   |                          |
+   | intercepts or    |            |        |                          |
+   | eavesdrops on    |            |        |                          |
+   | sharing message  |            |        |                          |
+   +------------------+------------+--------+--------------------------+
+   | Sender           | HIGH       | HIGH   | Implementors should      |
+   | mistakenly sends |            |        | ensure any initiated     |
+   | to the wrong     |            |        | shares can be            |
+   | Receiver         |            |        | withdrawn or revoked     |
+   |                  |            |        | at any time.             |
+   +------------------+------------+--------+--------------------------+
+   | Sender device    | MED        | HIGH   |                          |
+   | compromised      |            |        |                          |
+   +------------------+------------+--------+--------------------------+
+
+                                  Table 1
+
+2.1.  If an intermediary server is used
+
+   Some designs may rely on an intermediary server to facilitate the
+   transfer of material.  Below are threats and mitigations assuming
+   that there is an intermediary server hosting encrypted content at an
+   "unguessible" location.
+
+   +=====================+============+========+======================+
+   | Threat Description  | Likelihood | Impact | Mitigations          |
+   +=====================+============+========+======================+
+   | Attacker brute      | LOW        | LOW    | Limited TTL of       |
+   | forces              |            |        | storage, rate        |
+   | "unguessible"       |            |        | limiting of requests |
+   | location            |            |        |                      |
+   +---------------------+------------+--------+----------------------+
+   | Attacker intercepts | MED        | MED    | Seperate             |
+   | encryption key      |            |        | transimission of     |
+   |                     |            |        | encryption key and   |
+   |                     |            |        | unguessible location |
+   +---------------------+------------+--------+----------------------+
+   | Attacker intercepts | MED        | HIGH   | Implementor should   |
+   | encryption key and  |            |        | warn users about     |
+   | unguessible         |            |        | sharing credentials  |
+   | location            |            |        | to groups            |
+   +---------------------+------------+--------+----------------------+
+   | Attacker            | LOW        | LOW    | Content on the       |
+   | compromises         |            |        | server is encrypted  |
+   | intermediary server |            |        |                      |
+   +---------------------+------------+--------+----------------------+
+   | Attacker uses       | HIGH       | LOW    | intermediary server  |
+   | intermediary server |            |        | should have tight    |
+   | to store unrelated  |            |        | size limits and TTLS |
+   | items (i.e. cat     |            |        | to discourage misuse |
+   | pictures)           |            |        |                      |
+   +---------------------+------------+--------+----------------------+
+
+                                 Table 2
+
+3.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+4.  IANA Considerations
+
+   This document has no IANA actions.
+
+5.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Acknowledgments
+
+   This document took as inspiration the threat model
+   (https://github.com/dimmyvi/tigress-sample-implementation/blob/main/
+   draft-tigress-sample-implementation.md#threat-model) that was part of
+   Dmitry Vinokurov's sample implementation document.
+
+Author's Address
+
+   Brad Lassey
+   Google
+   Email: lassey@google.com
