@@ -1,1 +1,125 @@
-
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-02-05T01:05:05.186757+00:00",
+  "repo": "bslassey/tigress-threat-model",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOI1w2vM5JJXrL",
+      "title": "Update draft-lassey-tigress-threat-model.md",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/1",
+      "state": "MERGED",
+      "author": "castiz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Updating some typos and adding a mitigation.",
+      "createdAt": "2023-02-02T20:29:53Z",
+      "updatedAt": "2023-02-03T19:41:18Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "6e70ea8d1d63f2249b8190b2db559039f267b783",
+      "headRepository": "bslassey/tigress-threat-model",
+      "headRefName": "castiz-patch-1",
+      "headRefOid": "0ae5df80f9bb3946fc9e7185fe84a93f1d98a3fa",
+      "closedAt": "2023-02-03T19:41:17Z",
+      "mergedAt": "2023-02-03T19:41:17Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "c858c1503c2d79f4841742c6f7725c49e97dcb8e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5MgZDB",
+          "commit": {
+            "abbreviatedOid": "0ae5df8"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-02-03T18:59:55Z",
+          "updatedAt": "2023-02-03T18:59:55Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOI1w2vM5JO2vw",
+      "title": "Add suggested mitigation for interception",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/2",
+      "state": "MERGED",
+      "author": "snorp",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-02-03T20:24:30Z",
+      "updatedAt": "2023-02-03T21:16:17Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "efb0f502ff684cc6a534a52486c4625bef80e16f",
+      "headRepository": "snorp/tigress-threat-model",
+      "headRefName": "main",
+      "headRefOid": "43cc5e0c1d21cbc1d5452689a753edfb94e9cd39",
+      "closedAt": "2023-02-03T21:16:17Z",
+      "mergedAt": "2023-02-03T21:16:17Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "92be8e4fa2db1d2b2c0d2d255fe8ed15255fdf72"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
