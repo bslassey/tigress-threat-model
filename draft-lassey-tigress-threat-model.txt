@@ -5,8 +5,8 @@
 Transfer dIGital cREdentialS Securely                          B. Lassey
 Internet-Draft                                                    Google
 Intended status: Informational                                  C. Astiz
-Expires: 7 August 2023                                             Apple
-                                                         3 February 2023
+Expires: 20 August 2023                                            Apple
+                                                        16 February 2023
 
 
                           TIGRESS Threat Model
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 August 2023.
+   This Internet-Draft will expire on 20 August 2023.
 
 Copyright Notice
 
@@ -102,14 +102,15 @@ Table of Contents
 
 1.2.  Security goals:
 
-   *  Ensure only the intended recipient is able to provision the
-      credential
+   *  Allow for ensuring that only the intended recipient is able to
+      provision the credential
 
-   *  Ensure the credential can only be provisioned once (anti-replay)
+   *  Allow for ensuring that the credential can only be provisioned
+      once (anti-replay)
 
-   *  Ensure the sender has the intent to transfer (proof of the fact
-      that the share initiation is attributed to a valid device and a
-      user)
+   *  Allow for ensuring that the sender has the intent to transfer
+      (proof of the fact that the share initiation is attributed to a
+      valid device and a user)
 
 1.3.  Functional goals:
 
