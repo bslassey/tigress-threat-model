@@ -5,8 +5,8 @@
 Transfer dIGital cREdentialS Securely                          B. Lassey
 Internet-Draft                                                    Google
 Intended status: Informational                                  C. Astiz
-Expires: 20 August 2023                                            Apple
-                                                        16 February 2023
+Expires: 25 August 2023                                            Apple
+                                                        21 February 2023
 
 
                           TIGRESS Threat Model
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 August 2023.
+   This Internet-Draft will expire on 25 August 2023.
 
 Copyright Notice
 
@@ -149,7 +149,7 @@ Table of Contents
    | Threat           | Likelihood | Impact | Mitigations              |
    | Description      |            |        |                          |
    +==================+============+========+==========================+
-   | An Attacker with | MED        | HIGH   | Implementors SHOULD      |
+   | An Attacker with | MED        | HIGH   | Implementers SHOULD      |
    | physical access  |            |        | take sufficient          |
    | to the victim's  |            |        | precautions to ensure    |
    | phone initiates  |            |        | that the device owner    |
@@ -168,7 +168,7 @@ Table of Contents
    |                  |            |        | share a secret out of    |
    |                  |            |        | band                     |
    +------------------+------------+--------+--------------------------+
-   | Sender           | HIGH       | HIGH   | Implementors should      |
+   | Sender           | HIGH       | HIGH   | Implementers should      |
    | mistakenly sends |            |        | ensure any initiated     |
    | to the wrong     |            |        | shares can be            |
    | Receiver         |            |        | withdrawn or revoked     |
