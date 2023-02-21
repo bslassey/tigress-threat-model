@@ -195,8 +195,8 @@ Table of Contents
    | "unguessable"       |            |        | limiting of requests |
    | location            |            |        |                      |
    +---------------------+------------+--------+----------------------+
-   | Attacker intercepts | MED        | MED    | Seperate             |
-   | encryption key      |            |        | transimission of     |
+   | Attacker intercepts | MED        | MED    | Separate             |
+   | encryption key      |            |        | transmission of      |
    |                     |            |        | encryption key and   |
    |                     |            |        | unguessable location |
    +---------------------+------------+--------+----------------------+
