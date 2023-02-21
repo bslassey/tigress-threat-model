@@ -185,24 +185,24 @@ Table of Contents
    Some designs may rely on an intermediary server to facilitate the
    transfer of material.  Below are threats and mitigations assuming
    that there is an intermediary server hosting encrypted content at an
-   "unguessible" location.
+   "unguessable" location.
 
    +=====================+============+========+======================+
    | Threat Description  | Likelihood | Impact | Mitigations          |
    +=====================+============+========+======================+
    | Attacker brute      | LOW        | LOW    | Limited TTL of       |
    | forces              |            |        | storage, rate        |
-   | "unguessible"       |            |        | limiting of requests |
+   | "unguessable"       |            |        | limiting of requests |
    | location            |            |        |                      |
    +---------------------+------------+--------+----------------------+
    | Attacker intercepts | MED        | MED    | Seperate             |
    | encryption key      |            |        | transimission of     |
    |                     |            |        | encryption key and   |
-   |                     |            |        | unguessible location |
+   |                     |            |        | unguessable location |
    +---------------------+------------+--------+----------------------+
    | Attacker intercepts | MED        | HIGH   | Implementor should   |
    | encryption key and  |            |        | warn users about     |
-   | unguessible         |            |        | sharing credentials  |
+   | unguessable         |            |        | sharing credentials  |
    | location            |            |        | to groups            |
    +---------------------+------------+--------+----------------------+
    | Attacker            | LOW        | LOW    | Content on the       |
