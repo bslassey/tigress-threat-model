@@ -30,7 +30,10 @@ author:
     fullname: Casey Astiz
     organization: Apple
     email: castiz@apple.com
-
+ -
+    fullname: Dmitry Vinokurov
+    organization: Apple
+    email: dvinokurov@apple.com
 normative:
 
 informative:
@@ -51,6 +54,9 @@ informative:
     -
       ins: Y. Karandikar
       name: Yogesh Karandikar
+    -
+      ins: B Lassey
+      name: Brad Lassey
 
     title: "Tigress requirements"
     date: 2023-04
@@ -123,10 +129,10 @@ The user who is the intended recipient and accepts the invitation with the trans
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|An Attacker with physical access to the victim's phone initiates the transfer of a Credential to the the Attacker's device|MED|HIGH|Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initition|
-|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band|
-|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementers should ensure any initiated attempts of credential transfer can be withdrawn or revoked at any time.|
-|Sender device compromised|MED|HIGH||
+|An Attacker with physical access to the victim's phone initiates the transfer of a Credential to the the Attacker's device|MED|HIGH|{user-auth}|
+|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|{secret-transport}|
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|{transfer-control}|
+|Sender device compromised|MED|HIGH|{transfer-control}|
 
 
 ## If an intermediary server is used
@@ -134,13 +140,37 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|Attacker brute forces "unguessable" location|LOW|LOW|Limited TTL of storage, rate limiting of requests|
-|Attacker intercepts encryption key|MED|MED|Separate transmission of encryption key and unguessable location|
-|Attacker intercepts encryption key and unguessable location|MED|HIGH|Implementor should warn users about transferring credentials to groups|
-|Attacker compromises intermediary server|LOW|LOW|Content on the server is encrypted|
-|Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|intermediary server should have tight size limits and TTLS to discourage misuse|
+|Attacker brute forces "unguessable" location|LOW|LOW|{limited-ttl}|
+|Attacker intercepts encryption key|MED|MED|{secret-separation}|
+|Attacker intercepts encryption key and unguessable location|MED|HIGH|{group-transfer-warning}|
+|Attacker compromises intermediary server|LOW|LOW|{mailbox-content-encryption}|
+|Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|{mailbox-limits}|
 
 
+## Mitigations.
+### User authentication at the time of transfer initiation {#user-auth}
+Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initition.
+
+### Secret to be sent securily {#secret-transport}
+Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band.
+
+### Transfer control {#transfer-control}
+Implementers should ensure any initiated attempts of credential transfer can be withdrawn or revoked at any time.
+
+### Limited time-to-live for mailbox storage {#limited-ttl}
+Limited TTL of storage, rate limiting of requests.
+
+### Separation of shareURL and secret {#secret-separation}
+Separate transmission of encryption key and unguessable location.
+
+### Group transfer warning {#group-transfer-warning}
+Implementor should warn users about transferring credentials to groups.
+
+### Encrypted mailbox content {#mailbox-content-encryption}
+Content on the server is encrypted.
+
+### Mailbox size limit and TTL {#mailbox-limits}
+Intermediary server should have tight size limits and TTLS to discourage misuse
 
 # Conventions and Definitions
 
