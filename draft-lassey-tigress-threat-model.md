@@ -112,19 +112,28 @@ non-public or closed community) formats
 From these goals we can derive a threat model for the general problem space.
 
 # Threat Model
+
 ## Assets and Data
+
 ### Credential
 The credential or key that is being transferred via this protocol.
+
 ### Intermediary data
 Data that is transferred over the course of the transaction.
+
 ### Credential transfer invitation
 The initial data containing Provisioning Information {{Tigress-req-03}} transmetted to the receiver which represents an invitation to accept the transferred credential.
+
 # Users
+
 ## Sender
 The user who initiates the credential transfer.
+
 ## Receiver
 The user who is the intended recipient and accepts the invitation with the transferred credential.
+
 # Attackers and Motivations
+
 # Threats and mitigations
 
 |Threat Description|Likelihood|Impact|Mitigations|
@@ -148,6 +157,7 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 
 
 ## Mitigations.
+
 ### User authentication at the time of transfer initiation {#user-auth}
 Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initition.
 
