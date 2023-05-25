@@ -138,10 +138,10 @@ The user who is the intended recipient and accepts the invitation with the trans
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|An Attacker with physical access to the victim's phone initiates the transfer of a Credential to the the Attacker's device|MED|HIGH|{user-auth}|
-|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|{secret-transport}|
-|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|{transfer-control}|
-|Sender device compromised|MED|HIGH|{transfer-control}|
+|An Attacker with physical access to the victim's phone initiates the transfer of a Credential to the the Attacker's device|MED|HIGH|{{user-auth}}|
+|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|{{secret-transport}}|
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|{{transfer-control}}|
+|Sender device compromised|MED|HIGH|{{transfer-control}}|
 
 
 ## If an intermediary server is used
@@ -149,11 +149,11 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|Attacker brute forces "unguessable" location|LOW|LOW|{limited-ttl}|
-|Attacker intercepts encryption key|MED|MED|{secret-separation}|
-|Attacker intercepts encryption key and unguessable location|MED|HIGH|{group-transfer-warning}|
-|Attacker compromises intermediary server|LOW|LOW|{mailbox-content-encryption}|
-|Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|{mailbox-limits}|
+|Attacker brute forces "unguessable" location|LOW|LOW|{{limited-ttl}}|
+|Attacker intercepts encryption key|MED|MED|{{secret-separation}}|
+|Attacker intercepts encryption key and unguessable location|MED|HIGH|{{group-transfer-warning}}|
+|Attacker compromises intermediary server|LOW|LOW|{{mailbox-content-encryption}}|
+|Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|{{mailbox-limits}}|
 
 
 ## Mitigations.
