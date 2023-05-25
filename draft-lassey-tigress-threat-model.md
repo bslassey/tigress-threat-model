@@ -132,6 +132,9 @@ The user who initiates the credential transfer.
 ## Receiver
 The user who is the intended recipient and accepts the invitation with the transferred credential.
 
+## Credential Authority
+The Provisioning Entity {{Tigress-req-03}} that manages the lifecycle of a credential on a device.
+
 # Attackers and Motivations
 
 # Threats and mitigations
@@ -142,6 +145,7 @@ The user who is the intended recipient and accepts the invitation with the trans
 |Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|{{secret-transport}}|
 |Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|{{transfer-control}}|
 |Sender device compromised|MED|HIGH|{{transfer-control}}|
+|Attacker compromises Credential Authority|LOW|HIGH|None|
 
 
 ## If an intermediary server is used
