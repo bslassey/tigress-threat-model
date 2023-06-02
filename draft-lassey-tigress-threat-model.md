@@ -146,6 +146,9 @@ The Provisioning Entity {{Tigress-req-03}} that manages the lifecycle of a crede
 |Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|{{transfer-control}}|
 |Sender device compromised|MED|HIGH|{{transfer-control}}|
 |Attacker compromises Credential Authority|LOW|HIGH|None|
+|Credential Authority can recognize and track Sender across shares|HIGH|LOW|None|
+|Credential Authority can recognize and track Reciever across shares|HIGH|LOW|None|
+
 
 
 ## If an intermediary server is used
