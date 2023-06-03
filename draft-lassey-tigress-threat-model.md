@@ -125,7 +125,7 @@ A digital credential {{Tigress-req-03}} is composed of Cryptographic material an
 Data that is exchanged over the course of credential transfer.
 
 ### Credential transfer invitation
-The initial data containing Provisioning Information {{Tigress-req-03}} sent to the receiver. It represents an invitation to accept the transfer of copy of the credential.
+The initial data containing Provisioning Information {{Tigress-req-03}} sent to the receiver. It represents an invitation to accept the transfer of the credential.
 
 # Users
 
