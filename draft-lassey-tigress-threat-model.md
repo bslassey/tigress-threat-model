@@ -34,6 +34,11 @@ author:
     fullname: Dmitry Vinokurov
     organization: Apple
     email: dvinokurov@apple.com
+ -
+    fullname: Yogesh Karandikar
+    organization: Apple
+    email: ykarandikar@apple.com
+
 normative:
 
 informative:
@@ -54,9 +59,7 @@ informative:
     -
       ins: Y. Karandikar
       name: Yogesh Karandikar
-    -
-      ins: B Lassey
-      name: Brad Lassey
+
 
     title: "Tigress requirements"
     date: 2023-04
@@ -116,13 +119,13 @@ From these goals we can derive a threat model for the general problem space.
 ## Assets and Data
 
 ### Credential
-The credential or key that is being transferred via this protocol.
+A digital credential {{Tigress-req-03}} is composed of Cryptographic material and other data that enables an user to access a property.
 
 ### Intermediary data
-Data that is transferred over the course of the transaction.
+Data that is exchanged over the course of credential transfer.
 
 ### Credential transfer invitation
-The initial data containing Provisioning Information {{Tigress-req-03}} transmetted to the receiver which represents an invitation to accept the transferred credential.
+The initial data containing Provisioning Information {{Tigress-req-03}} sent to the receiver. It represents an invitation to accept the transfer of the credential.
 
 # Users
 
@@ -168,9 +171,9 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 ## Mitigations.
 
 ### User authentication at the time of transfer initiation {#user-auth}
-Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initition.
+Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initiation.
 
-### Secret to be sent securily {#secret-transport}
+### Secret to be sent securely {#secret-transport}
 Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band.
 
 ### Transfer control {#transfer-control}
