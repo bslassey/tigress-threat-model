@@ -1,0 +1,742 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-06-06T01:06:03.926547+00:00",
+  "repo": "bslassey/tigress-threat-model",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 4,
+      "id": "I_kwDOI1w2vM5jIk5P",
+      "title": "Better define credentials ",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/4",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "ykarandikar"
+      ],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/",
+      "createdAt": "2023-04-11T20:47:22Z",
+      "updatedAt": "2023-06-05T12:28:39Z",
+      "closedAt": "2023-06-05T12:28:39Z",
+      "comments": [
+        {
+          "author": "ykarandikar",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I can work on this issue",
+          "createdAt": "2023-05-25T17:22:55Z",
+          "updatedAt": "2023-05-25T17:22:55Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOI1w2vM5jIlop",
+      "title": "Document linkability of threat for sender and reciever",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/5",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n> # Is Linkability in Scope?\r\n> \r\n> The above point raises the question about what kind of linkability or\r\n> unlinkability between the non-relay parties is in scope here.  The\r\n> charter expressly says that a relay server can learn nothing about the\r\n> sender and the recipient; but does the protocol afford any provisions\r\n> for the sender to link multiple instances of the same recipient together\r\n> (e.g., \"share my car keys with my subtenant who i have already shared my\r\n> house keys with\")? or for the recipient to link the sender together\r\n> (e.g., \"you've extended your homestay: you have an incoming offer of\r\n> another housekey from the person who shared you your current housekey\")?",
+      "createdAt": "2023-04-11T20:50:15Z",
+      "updatedAt": "2023-06-02T19:23:08Z",
+      "closedAt": "2023-06-02T19:23:08Z",
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOI1w2vM5jImVI",
+      "title": "Document linkability threat from the provisioning entity/service",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/6",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n> \r\n> If a third-party provisioning service (\"credential authority\"?) is\r\n> involved, is this protocol expected to permit the provisioner to learn\r\n> anything about the other participants, or is the provisioner blinded?",
+      "createdAt": "2023-04-11T20:53:01Z",
+      "updatedAt": "2023-06-02T19:16:04Z",
+      "closedAt": "2023-06-02T19:16:04Z",
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOI1w2vM5jInkF",
+      "title": "List the Provisioning Entity (aka \"Credential Authority\")  as an user and document the threats they impose",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/7",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "snorp"
+      ],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n> # \"Credential Authority\" is missing\r\n> \r\n> The charter makes multiple mentions of a \"credential authority\", but the\r\n> threat model doesn't mention this actor at all.  Is this actor not a\r\n> part of the threat model?  If the \"credential authority\" is the sender\r\n> themselves, then presumably there is a different posture toward the\r\n> credential authority than if the credential authority is a distinct\r\n> actor.  The threat model document should describe the security, privacy,\r\n> and functionality goals and non-goals with respect to a non-sender\r\n> credential authority at least.\r\n",
+      "createdAt": "2023-04-11T20:57:23Z",
+      "updatedAt": "2023-05-25T21:54:55Z",
+      "closedAt": "2023-05-25T21:54:55Z",
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOI1w2vM5jIqpI",
+      "title": "Clarify share invitation vs share request",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/8",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n>   the \"Functional Goals\" section refers to a \"share request\" but the\r\n>   \"assets and data\" section refers to a \"share invitation\".  if these\r\n>   are the same thing, please use the same term.  If they're different\r\n>   things, please explain the difference.",
+      "createdAt": "2023-04-11T21:07:57Z",
+      "updatedAt": "2023-05-23T21:47:44Z",
+      "closedAt": "2023-05-23T21:47:44Z",
+      "comments": [
+        {
+          "author": "snorp",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This doesn't seem to apply any more. There are no instances of \"share request\" in the current document.",
+          "createdAt": "2023-05-23T21:47:44Z",
+          "updatedAt": "2023-05-23T21:47:44Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOI1w2vM5jIq5r",
+      "title": "Avoid use of \"allow for\"",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/9",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n>   The text in git has \"allow for\" in a bunch of places that seem like\r\n>   excessive indirection.  some of them were added more recently than\r\n>   the git tag for draft -00.  \"allow for ensuring that\u2026\" all seems\r\n>   entirely redundant in the list of security goals -- dropping that\r\n>   clause entirely yields the actual goal of the protocol, no?  shorter\r\n>   is sweeter.",
+      "createdAt": "2023-04-11T21:09:04Z",
+      "updatedAt": "2023-05-25T17:06:34Z",
+      "closedAt": "2023-05-25T17:06:33Z",
+      "comments": [
+        {
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "body": "@dkg I think I disagree that \"allow for\" is redundant to take some specific examples:\r\n\r\n> * Allow for ensuring that only the intended recipient is able to provision the credential\r\nversus \r\n> * Ensure that only the intended recipient is able to provision the credential\r\n\r\nIn the first case, the protocol needs to make it possible for the sender to make sure that only the intended recipient is able to provision the credential where as in the second the protocol itself needs to ensure that only the intended recipient is able to\r\n\r\n\r\n\r\n> * Allow for ensuring that the credential can only be provisioned once (anti-replay)\r\nversus\r\n> * Ensure that the credential can only be provisioned once (anti-replay)\r\nHere might have more of an obvious implication. The protocol should allow the sender to prevent the credential from being provisioned more than once if it wants. But perhaps the sender wants to allow it to be provisioned to multiple devices (e.g. sending a house rental key to a group chat of friends sharing it). The first statement would allow for that where as the second would seem to preclude that.\r\n\r\n\r\n> * Allow for ensuring that the sender has the intent to transfer (proof of the fact that the\r\n> initiation of the credential transfer is attributed to a valid device and a user)\r\nversus\r\n> Ensure that the sender has the intent to transfer (proof of the fact that the\r\n> initiation of the credential transfer is attributed to a valid device and a user)\r\nHere I'm not sure how the protocol could accomplish the second goal, but I can foresee making allowances for the first one.\r\n\r\n",
+          "createdAt": "2023-05-19T17:17:34Z",
+          "updatedAt": "2023-05-19T17:17:34Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "body": "Closing, @dkg feel free to re-open if you disagree.",
+          "createdAt": "2023-05-25T17:06:33Z",
+          "updatedAt": "2023-05-25T17:06:33Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOI1w2vM5jIrVZ",
+      "title": "Make better use of table formatting ",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/10",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n>   Tables are a poor fit for the kind of narrative discussion in the two\r\n>   \"Threat Description\" tables.  I understand the appeal of being able\r\n>   to scan the scenarios in summarized form, but i think you can do\r\n>   both: for each scenario:\r\n> \r\n> - give it a short, catchy name;\r\n> \r\n> - move the description of its mitigations into its own subsection with\r\n>   the short name\r\n> \r\n> - keep the table, but the columns are now: name, likelihood, impact,\r\n>   reference (where reference is a pointer to the relevant subsection.",
+      "createdAt": "2023-04-11T21:10:20Z",
+      "updatedAt": "2023-05-23T21:46:02Z",
+      "closedAt": "2023-05-23T21:46:01Z",
+      "comments": [
+        {
+          "author": "snorp",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixed by #13 ",
+          "createdAt": "2023-05-23T21:46:01Z",
+          "updatedAt": "2023-05-23T21:46:01Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOI1w2vM5jIrp5",
+      "title": "Clarify usage of the term \"share\"",
+      "url": "https://github.com/bslassey/tigress-threat-model/issues/11",
+      "state": "CLOSED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in @dkg's review https://mailarchive.ietf.org/arch/msg/tigress/NlwVk1XCcAkwNnSDj6c33vgZvhU/\r\n\r\n>   the draft uses the term \"share\" in multiple meanings.  it would be\r\n>   good for clarity to use it in at most one way.   For example, don't\r\n>   use the same word to refer to the act of sending the invitation as for\r\n>   the overall protocol.",
+      "createdAt": "2023-04-11T21:11:37Z",
+      "updatedAt": "2023-05-19T18:43:44Z",
+      "closedAt": "2023-05-19T18:43:43Z",
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Can this be closed as it's been addressed by PR #12 ?",
+          "createdAt": "2023-05-19T18:29:22Z",
+          "updatedAt": "2023-05-19T18:29:22Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "body": "Yes, I think so",
+          "createdAt": "2023-05-19T18:43:43Z",
+          "updatedAt": "2023-05-19T18:43:43Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOI1w2vM5JJXrL",
+      "title": "Update draft-lassey-tigress-threat-model.md",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/1",
+      "state": "MERGED",
+      "author": "castiz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Updating some typos and adding a mitigation.",
+      "createdAt": "2023-02-02T20:29:53Z",
+      "updatedAt": "2023-02-03T19:41:18Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "6e70ea8d1d63f2249b8190b2db559039f267b783",
+      "headRepository": "bslassey/tigress-threat-model",
+      "headRefName": "castiz-patch-1",
+      "headRefOid": "0ae5df80f9bb3946fc9e7185fe84a93f1d98a3fa",
+      "closedAt": "2023-02-03T19:41:17Z",
+      "mergedAt": "2023-02-03T19:41:17Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "c858c1503c2d79f4841742c6f7725c49e97dcb8e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5MgZDB",
+          "commit": {
+            "abbreviatedOid": "0ae5df8"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-02-03T18:59:55Z",
+          "updatedAt": "2023-02-03T18:59:55Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOI1w2vM5JO2vw",
+      "title": "Add suggested mitigation for interception",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/2",
+      "state": "MERGED",
+      "author": "snorp",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-02-03T20:24:30Z",
+      "updatedAt": "2023-02-03T21:16:17Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "efb0f502ff684cc6a534a52486c4625bef80e16f",
+      "headRepository": "snorp/tigress-threat-model",
+      "headRefName": "main",
+      "headRefOid": "43cc5e0c1d21cbc1d5452689a753edfb94e9cd39",
+      "closedAt": "2023-02-03T21:16:17Z",
+      "mergedAt": "2023-02-03T21:16:17Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "92be8e4fa2db1d2b2c0d2d255fe8ed15255fdf72"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOI1w2vM5Ngn3s",
+      "title": "fix spelling of receiver",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/3",
+      "state": "MERGED",
+      "author": "dkg",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-04-03T17:02:12Z",
+      "updatedAt": "2023-04-03T17:50:19Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "a39f162b56a84df7901b9023d98e13d9bd620143",
+      "headRepository": "dkg/tigress-threat-model",
+      "headRefName": "spelling",
+      "headRefOid": "6bfe0b46f62ff367b07fd1b1a610752082c1d643",
+      "closedAt": "2023-04-03T17:50:18Z",
+      "mergedAt": "2023-04-03T17:50:18Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "4b4e6beaf5125e84015592ce3661bda681db6cc6"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5RoAvf",
+          "commit": {
+            "abbreviatedOid": "6bfe0b4"
+          },
+          "author": "castiz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-04-03T17:03:08Z",
+          "updatedAt": "2023-04-03T17:03:08Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOI1w2vM5Qwfgc",
+      "title": "Addressing issue #11  - share.md",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/12",
+      "state": "MERGED",
+      "author": "dimmyvi",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressing issue #11",
+      "createdAt": "2023-05-17T21:52:53Z",
+      "updatedAt": "2023-05-17T23:14:51Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "4b4e6beaf5125e84015592ce3661bda681db6cc6",
+      "headRepository": "dimmyvi/tigress-threat-model",
+      "headRefName": "patch-2",
+      "headRefOid": "4ce1bbf2b74ec05dc6d34b526a9ffb670ccfbb81",
+      "closedAt": "2023-05-17T23:14:51Z",
+      "mergedAt": "2023-05-17T23:14:51Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "ff52f52ae2a4745fb317e3dc1f746449068d9f98"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5VV00T",
+          "commit": {
+            "abbreviatedOid": "4ce1bbf"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-05-17T23:09:25Z",
+          "updatedAt": "2023-05-17T23:09:25Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOI1w2vM5Q7eCP",
+      "title": "Update draft-lassey-tigress-threat-model.md",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/13",
+      "state": "MERGED",
+      "author": "dimmyvi",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressing issue  #10",
+      "createdAt": "2023-05-19T23:33:21Z",
+      "updatedAt": "2023-05-22T13:56:11Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "ff52f52ae2a4745fb317e3dc1f746449068d9f98",
+      "headRepository": "dimmyvi/tigress-threat-model",
+      "headRefName": "patch-3",
+      "headRefOid": "a749814b8bb338ad7a5d4564e320fea1f8be0026",
+      "closedAt": "2023-05-22T13:56:11Z",
+      "mergedAt": "2023-05-22T13:56:11Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "7566d8861eb3cf77f0d9c48167986aa14ec54e33"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5VokPB",
+          "commit": {
+            "abbreviatedOid": "a749814"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-05-22T13:56:05Z",
+          "updatedAt": "2023-05-22T13:56:05Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDOI1w2vM5RLdb5",
+      "title": "Fix up section formatting",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/14",
+      "state": "MERGED",
+      "author": "snorp",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-05-23T19:49:04Z",
+      "updatedAt": "2023-05-23T21:45:45Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "7566d8861eb3cf77f0d9c48167986aa14ec54e33",
+      "headRepository": "snorp/tigress-threat-model",
+      "headRefName": "main",
+      "headRefOid": "c5c6769757986f41735d1a96e01cc9a30024a4dd",
+      "closedAt": "2023-05-23T21:45:45Z",
+      "mergedAt": "2023-05-23T21:45:45Z",
+      "mergedBy": "snorp",
+      "mergeCommit": {
+        "oid": "a0cf7164b25e98400ca06e1bfaf92b52b9ae20fc"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5V3IrX",
+          "commit": {
+            "abbreviatedOid": "c5c6769"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-05-23T20:30:16Z",
+          "updatedAt": "2023-05-23T20:30:16Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOI1w2vM5RXaBL",
+      "title": "Fix section links in the tables",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/15",
+      "state": "MERGED",
+      "author": "snorp",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-05-25T17:25:03Z",
+      "updatedAt": "2023-05-25T17:29:09Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "a0cf7164b25e98400ca06e1bfaf92b52b9ae20fc",
+      "headRepository": "snorp/tigress-threat-model",
+      "headRefName": "fix-table-mitigations",
+      "headRefOid": "b20de70e4cb4f61d301b0943dfa2894234a6f258",
+      "closedAt": "2023-05-25T17:28:23Z",
+      "mergedAt": "2023-05-25T17:28:23Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "e0e92e1a5190beeeda04b8037738872e1c2e6f1b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5WFzWT",
+          "commit": {
+            "abbreviatedOid": "b20de70"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-05-25T17:28:06Z",
+          "updatedAt": "2023-05-25T17:28:06Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOI1w2vM5WFzav",
+          "commit": {
+            "abbreviatedOid": "b20de70"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-05-25T17:28:18Z",
+          "updatedAt": "2023-05-25T17:28:18Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOI1w2vM5RX3HR",
+      "title": "Add Credential Authority to list of users",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/16",
+      "state": "MERGED",
+      "author": "snorp",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #7\n",
+      "createdAt": "2023-05-25T19:04:40Z",
+      "updatedAt": "2023-05-25T21:54:55Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "e0e92e1a5190beeeda04b8037738872e1c2e6f1b",
+      "headRepository": "snorp/tigress-threat-model",
+      "headRefName": "credential-authority",
+      "headRefOid": "d4df2f51fcd90b5f0add524c70ed14eb1f42996c",
+      "closedAt": "2023-05-25T21:54:54Z",
+      "mergedAt": "2023-05-25T21:54:54Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "f2009489076f3e5fc33563d07a0d07deefffe328"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 17,
+      "id": "PR_kwDOI1w2vM5SBwMN",
+      "title": "Document tracking threat from Credential Authority",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/17",
+      "state": "MERGED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "closes #6",
+      "createdAt": "2023-06-02T18:54:07Z",
+      "updatedAt": "2023-06-02T19:16:03Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "f2009489076f3e5fc33563d07a0d07deefffe328",
+      "headRepository": "bslassey/tigress-threat-model",
+      "headRefName": "bslassey-ca-tracking",
+      "headRefOid": "e3af8963a3c5319c2255189acb7d83297886397c",
+      "closedAt": "2023-06-02T19:16:03Z",
+      "mergedAt": "2023-06-02T19:16:03Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "a6e344015bcfd38cab508c758f2a7b1e1c9503e7"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5W7La7",
+          "commit": {
+            "abbreviatedOid": "e3af896"
+          },
+          "author": "snorp",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-06-02T19:14:50Z",
+          "updatedAt": "2023-06-02T19:14:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "PR_kwDOI1w2vM5SB2e4",
+      "title": "document tracking threat between sender and receiver",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/18",
+      "state": "MERGED",
+      "author": "bslassey",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "closes #5",
+      "createdAt": "2023-06-02T19:18:42Z",
+      "updatedAt": "2023-06-02T19:23:07Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "a6e344015bcfd38cab508c758f2a7b1e1c9503e7",
+      "headRepository": "bslassey/tigress-threat-model",
+      "headRefName": "bslassey-sender-receiver-tracking",
+      "headRefOid": "a34147f558c3ede7f48e4376e4e2c31284e48773",
+      "closedAt": "2023-06-02T19:23:07Z",
+      "mergedAt": "2023-06-02T19:23:07Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "8f6cc517ea2727341a4089fdcab28b588a0f8b87"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5W7Nns",
+          "commit": {
+            "abbreviatedOid": "a34147f"
+          },
+          "author": "snorp",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-06-02T19:22:38Z",
+          "updatedAt": "2023-06-02T19:22:38Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "id": "PR_kwDOI1w2vM5SCP3X",
+      "title": "Define Credential and link to requirments doc.",
+      "url": "https://github.com/bslassey/tigress-threat-model/pull/19",
+      "state": "MERGED",
+      "author": "ykarandikar",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fix spellings, whitespaces and duplications.",
+      "createdAt": "2023-06-02T20:40:46Z",
+      "updatedAt": "2023-06-05T12:28:38Z",
+      "baseRepository": "bslassey/tigress-threat-model",
+      "baseRefName": "main",
+      "baseRefOid": "8f6cc517ea2727341a4089fdcab28b588a0f8b87",
+      "headRepository": "bslassey/tigress-threat-model",
+      "headRefName": "ykarandikar_credential",
+      "headRefOid": "c340af69e645a74354bfbf909920acbd6a68363c",
+      "closedAt": "2023-06-05T12:28:37Z",
+      "mergedAt": "2023-06-05T12:28:37Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "b303228f45260e3284c89f054cbb400230685225"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOI1w2vM5W8Ej6",
+          "commit": {
+            "abbreviatedOid": "7307d95"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-06-02T23:19:31Z",
+          "updatedAt": "2023-06-02T23:19:31Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOI1w2vM5W8FjB",
+          "commit": {
+            "abbreviatedOid": "7307d95"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-02T23:23:02Z",
+          "updatedAt": "2023-06-02T23:23:30Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "\"to accept the transfer of the digital credential\" ? Do we need to mention a \"Copy\"",
+              "createdAt": "2023-06-02T23:23:03Z",
+              "updatedAt": "2023-06-02T23:23:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOI1w2vM5W8X_I",
+          "commit": {
+            "abbreviatedOid": "7307d95"
+          },
+          "author": "ykarandikar",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-03T00:28:20Z",
+          "updatedAt": "2023-06-03T00:28:21Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "It's not necessary to mention copy. I'll remove it.",
+              "createdAt": "2023-06-03T00:28:21Z",
+              "updatedAt": "2023-06-03T00:28:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOI1w2vM5XKsgC",
+          "commit": {
+            "abbreviatedOid": "c340af6"
+          },
+          "author": "bslassey",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-06-05T12:28:29Z",
+          "updatedAt": "2023-06-05T12:28:29Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
