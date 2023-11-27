@@ -174,7 +174,7 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initiation.
 
 ### Secret to be sent securely {#secret-transport}
-Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band.
+Solution should require an end-to-end encrypted messaging channel (such as iMessage, WhatsApp, RCS etc.) or otherwise specify a way to send a secret out of band.
 
 ### Transfer control {#transfer-control}
 Implementers should ensure any initiated attempts of credential transfer can be withdrawn or revoked at any time.
