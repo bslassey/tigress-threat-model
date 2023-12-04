@@ -5,14 +5,14 @@
 Transfer dIGital cREdentialS Securely                          B. Lassey
 Internet-Draft                                                    Google
 Intended status: Informational                                  C. Astiz
-Expires: 7 December 2023                                    D. Vinokurov
+Expires: 6 June 2024                                        D. Vinokurov
                                                            Y. Karandikar
                                                                    Apple
-                                                             5 June 2023
+                                                         4 December 2023
 
 
                           TIGRESS Threat Model
-                draft-lassey-tigress-threat-model-latest
+                 draft-ietf-tigress-threat-model-latest
 
 Abstract
 
@@ -25,10 +25,9 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at
-   https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-
+   https://bslassey.github.io/tigress-threat-model/draft-ietf-tigress-
    threat-model.html.  Status information for this document may be found
-   at https://datatracker.ietf.org/doc/draft-lassey-tigress-threat-
-   model/.
+   at https://datatracker.ietf.org/doc/draft-ietf-tigress-threat-model/.
 
    Discussion of this document takes place on the Transfer dIGital
    cREdentialS Securely Working Group mailing list
@@ -54,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 December 2023.
+   This Internet-Draft will expire on 6 June 2024.
 
 Copyright Notice
 
@@ -279,8 +278,9 @@ Table of Contents
 
 5.2.2.  Secret to be sent securely
 
-   Solution should require an end-to-end encrypted messaging channel or
-   otherwise specify a way to send a secret out of band.
+   Solution should require an end-to-end encrypted messaging channel
+   (such as iMessage, WhatsApp, RCS etc.) or otherwise specify a way to
+   send a secret out of band.
 
 5.2.3.  Transfer control
 

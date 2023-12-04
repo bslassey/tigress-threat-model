@@ -12,27 +12,27 @@
 <meta content="
        This document describes a threat model by which the working group can evaluate potential solutions to the problems laid out in the  TIGRESS charter . 
     " name="description">
-<meta content="xml2rfc 3.17.2" name="generator">
+<meta content="xml2rfc 3.18.2" name="generator">
 <meta content="tigress" name="keyword">
 <meta content="threat model" name="keyword">
-<meta content="draft-lassey-tigress-threat-model-latest" name="ietf.draft">
+<meta content="draft-ietf-tigress-threat-model-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.2
-    Python 3.11.3
-    appdirs 1.4.4
+  xml2rfc 3.18.2
+    Python 3.11.6
     ConfigArgParse 1.5.3
-    google-i18n-address 2.5.2
+    google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
-    lxml 4.9.2
+    lxml 4.9.3
+    platformdirs 4.0.0
     pycountry 22.3.5
     PyYAML 6.0
     requests 2.31.0
     setuptools 67.7.2
     six 1.16.0
-    wcwidth 0.2.6
+    wcwidth 0.2.12
 -->
-<link href="draft-lassey-tigress-threat-model.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-ietf-tigress-threat-model.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">@font-face {
   font-family: 'Lora';
@@ -653,7 +653,7 @@ sub, sup {
 }
 #toc nav li {
   line-height: 1.3em;
-  margin: 0.75em 0;
+  margin: 2px 0;
   padding-left: 1.2em;
   text-indent: -1.2em;
 }
@@ -746,7 +746,7 @@ hr.addr {
     z-index: 2;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
@@ -870,16 +870,13 @@ hr.addr {
     border-top: none;
     padding-top: 0;
   }
-  figure, pre {
+  figure, pre, .vcard {
     page-break-inside: avoid;
-  }
-  figure {
-    overflow: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
-  h2+*, h3+*, h4+*, h5+*, h6+* {
+  :is(h2, h3, h4, h5, h6)+*, dd {
     page-break-before: avoid;
   }
   pre {
@@ -892,6 +889,9 @@ hr.addr {
   }
   td {
     border-top: 1px solid #ddd;
+  }
+  .toplink {
+    display: none;
   }
 }
 
@@ -993,28 +993,6 @@ address div.right {
   text-align: right;
 }
 
-/* Give the table caption label the same styling as the figcaption */
-
-@media print {
-  .toplink {
-    display: none;
-  }
-
-  /* avoid overwriting the top border line with the ToC header */
-  #toc {
-    padding-top: 1px;
-  }
-
-  /* Avoid page breaks inside dl and author address entries */
-  dd {
-    page-break-before: avoid;
-  }
-  .vcard {
-    page-break-inside: avoid;
-  }
-
-}
-
 /* Dark mode. */
 @media (prefers-color-scheme: dark) {
 :root {
@@ -1051,11 +1029,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">TIGRESS Threat Model</td>
-<td class="right">June 2023</td>
+<td class="right">December 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Lassey, et al.</td>
-<td class="center">Expires 7 December 2023</td>
+<td class="center">Expires 6 June 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,15 +1043,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">Transfer dIGital cREdentialS Securely</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-lassey-tigress-threat-model-latest</dd>
+<dd class="internet-draft">draft-ietf-tigress-threat-model-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-06-05" class="published">5 June 2023</time>
+<time datetime="2023-12-04" class="published">4 December 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-12-07">7 December 2023</time></dd>
+<dd class="expires"><time datetime="2024-06-06">6 June 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1106,8 +1084,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        The latest revision of this draft can be found at <span><a href="https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-threat-model.html">https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-threat-model.html</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-lassey-tigress-threat-model/">https://datatracker.ietf.org/doc/draft-lassey-tigress-threat-model/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        The latest revision of this draft can be found at <span><a href="https://bslassey.github.io/tigress-threat-model/draft-ietf-tigress-threat-model.html">https://bslassey.github.io/tigress-threat-model/draft-ietf-tigress-threat-model.html</a></span>.
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-tigress-threat-model/">https://datatracker.ietf.org/doc/draft-ietf-tigress-threat-model/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
         Transfer dIGital cREdentialS Securely Working Group mailing list (<span><a href="mailto:tigress@ietf.org">mailto:tigress@ietf.org</a></span>),
@@ -1135,7 +1113,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 7 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1290,14 +1268,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-privacy-goals" class="section-name selfRef">Privacy goals:</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="section-1.1-1.1">The intermediate server should not see sensitive details of the Provisioning Information <span>[<a href="#Tigress-req-03" class="cite xref">Tigress-req-03</a>]</span><a href="#section-1.1-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.1-1.1">
+            <p id="section-1.1-1.1.1">The intermediate server should not see sensitive details of the Provisioning Information <span>[<a href="#Tigress-req-03" class="cite xref">Tigress-req-03</a>]</span><a href="#section-1.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.1-1.2">The intermediate server should not be able to provision the credential itself,
+          <li class="normal" id="section-1.1-1.2">
+            <p id="section-1.1-1.2.1">The intermediate server should not be able to provision the credential itself,
 acting as an intermediary for the recipient (person-in-the-middle,
-impersonation attack)<a href="#section-1.1-1.2" class="pilcrow">¶</a>
+impersonation attack)<a href="#section-1.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.1-1.3">Aside from network-level metadata, the intermediate server should not learn
-information about the sender or receiver<a href="#section-1.1-1.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-1.3">
+            <p id="section-1.1-1.3.1">Aside from network-level metadata, the intermediate server should not learn
+information about the sender or receiver<a href="#section-1.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1308,12 +1289,15 @@ information about the sender or receiver<a href="#section-1.1-1.3" class="pilcro
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-security-goals" class="section-name selfRef">Security goals:</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="section-1.2-1.1">Allow for ensuring that only the intended recipient is able to provision the credential<a href="#section-1.2-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.2-1.1">
+            <p id="section-1.2-1.1.1">Allow for ensuring that only the intended recipient is able to provision the credential<a href="#section-1.2-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.2-1.2">Allow for ensuring that the credential can only be provisioned once (anti-replay)<a href="#section-1.2-1.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.2-1.2">
+            <p id="section-1.2-1.2.1">Allow for ensuring that the credential can only be provisioned once (anti-replay)<a href="#section-1.2-1.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.2-1.3">Allow for ensuring that the sender has the intent to transfer (proof of the fact that the
-initiation of the credential transfer is attributed to a valid device and a user)<a href="#section-1.2-1.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.2-1.3">
+            <p id="section-1.2-1.3.1">Allow for ensuring that the sender has the intent to transfer (proof of the fact that the
+initiation of the credential transfer is attributed to a valid device and a user)<a href="#section-1.2-1.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1324,21 +1308,27 @@ initiation of the credential transfer is attributed to a valid device and a user
 <a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-functional-goals" class="section-name selfRef">Functional goals:</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="section-1.3-1.1">Allow a sender to initiate a credential transfer and select an intermediary server<a href="#section-1.3-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.3-1.1">
+            <p id="section-1.3-1.1.1">Allow a sender to initiate a credential transfer and select an intermediary server<a href="#section-1.3-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.3-1.2">Allow a recipient to view the transfer request with Provisioning Information <span>[<a href="#Tigress-req-03" class="cite xref">Tigress-req-03</a>]</span>, and provision the credential information associated with it upon receipt<a href="#section-1.3-1.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.3-1.2">
+            <p id="section-1.3-1.2.1">Allow a recipient to view the transfer request with Provisioning Information <span>[<a href="#Tigress-req-03" class="cite xref">Tigress-req-03</a>]</span>, and provision the credential information associated with it upon receipt<a href="#section-1.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.3-1.3">Allow a sender and a recipient to perform multiple round trip communications
-within a limited time frame<a href="#section-1.3-1.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.3-1.3">
+            <p id="section-1.3-1.3.1">Allow a sender and a recipient to perform multiple round trip communications
+within a limited time frame<a href="#section-1.3-1.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.3-1.4">Not require that both the sender and recipient have connectivity to the intermediary
-server at the same time<a href="#section-1.3-1.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.3-1.4">
+            <p id="section-1.3-1.4.1">Not require that both the sender and recipient have connectivity to the intermediary
+server at the same time<a href="#section-1.3-1.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.3-1.5">Support opaque message content based on the credential type<a href="#section-1.3-1.5" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.3-1.5">
+            <p id="section-1.3-1.5.1">Support opaque message content based on the credential type<a href="#section-1.3-1.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.3-1.6">Support a variety of types of credentials, to include those adhering to
+          <li class="normal" id="section-1.3-1.6">
+            <p id="section-1.3-1.6.1">Support a variety of types of credentials, to include those adhering to
 public standards (e.g., Car Connectivity Consortium) and proprietary (i.e.,
-non-public or closed community) formats<a href="#section-1.3-1.6" class="pilcrow">¶</a>
+non-public or closed community) formats<a href="#section-1.3-1.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-1.3-2">From these goals we can derive a threat model for the general problem space.<a href="#section-1.3-2" class="pilcrow">¶</a></p>
@@ -1581,7 +1571,7 @@ non-public or closed community) formats<a href="#section-1.3-1.6" class="pilcrow
           <h4 id="name-secret-to-be-sent-securely">
 <a href="#section-5.2.2" class="section-number selfRef">5.2.2. </a><a href="#name-secret-to-be-sent-securely" class="section-name selfRef">Secret to be sent securely</a>
           </h4>
-<p id="section-5.2.2-1">Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band.<a href="#section-5.2.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2.2-1">Solution should require an end-to-end encrypted messaging channel (such as iMessage, WhatsApp, RCS etc.) or otherwise specify a way to send a secret out of band.<a href="#section-5.2.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="transfer-control">
@@ -1659,6 +1649,7 @@ appear in all capitals, as shown here.<a href="#section-6-1" class="pilcrow">¶<
       <h2 id="name-references">
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
 <section id="section-8.1">
         <h3 id="name-normative-references">
 <a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
@@ -1674,6 +1665,8 @@ appear in all capitals, as shown here.<a href="#section-6-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
+<div id="sec-informative-references">
 <section id="section-8.2">
         <h3 id="name-informative-references">
 <a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
@@ -1685,6 +1678,7 @@ appear in all capitals, as shown here.<a href="#section-6-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
 </section>
 <div id="acknowledgments">
 <section id="appendix-A">
