@@ -3,7 +3,7 @@
 title: "TIGRESS Threat Model"
 category: info
 
-docname: draft-lassey-tigress-threat-model-latest
+docname: draft-ietf-tigress-threat-model-latest
 submissiontype: IETF
 number:
 date:
@@ -20,7 +20,7 @@ venue:
   mail: "tigress@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/tigress/"
   github: "bslassey/tigress-threat-model"
-  latest: "https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-threat-model.html"
+  latest: "https://bslassey.github.io/tigress-threat-model/draft-ietf-tigress-threat-model.html"
 author:
  -
     fullname: Brad Lassey
